@@ -1,0 +1,38 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "react-hooks"],
+  "rules": {
+    "react/no-unescaped-entities": "off",
+    "react/prop-types": "off", // Disable PropTypes rule if you prefer TypeScript or no type checking
+    "react/react-in-jsx-scope": "off", // React import is not required in React 17+
+    "react-hooks/rules-of-hooks": "error", // Verify rules of Hooks
+    "react-hooks/exhaustive-deps": "warn", // Check dependencies in useEffect
+    "no-unused-vars": "warn", // Warn about unused variables
+    "newline-before-return": "off", // Optional: Disable newline before return rule
+    "lines-around-comment": "off", // Optional: Disable lines around comment rule
+    "quotes": ["warn", "double"], // Enforce double quotes for consistency
+    "semi": ["warn", "always"] // Enforce semicolons for consistency
+  },
+  "settings": {
+    "react": {
+      "version": "detect" // Automatically detect the version of React
+    }
+  }
+}
