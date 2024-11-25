@@ -41,7 +41,7 @@ body {
 
 /* Home */
 .main-content-header{
-  padding: 100px 80px;
+  padding: 100px 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -72,6 +72,36 @@ body {
   margin-bottom: 20px;
   text-align: center;
   width: 90%;
+}
+.main-content .violations-section {
+  margin: 20px auto;
+  display: flex;
+  width: 35%;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+.main-content .violations-section .violation-container {
+  background-color: #fff;
+  padding: 40px 56px;
+  text-align: center;
+  border-radius: 30px;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+.main-content .violations-section .violation-container:hover{
+  background-color: #4A4244;
+  color: #fff;
+}
+.main-content .violations-section a {
+  text-decoration: none;
+  color: #231F20;
+}
+.violation-container{
+  padding: 0px 40px;
 }
 /* Login */
 .login-button-group {
