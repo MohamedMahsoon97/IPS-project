@@ -1,41 +1,16 @@
 import React, { useState } from 'react';
 import IraqLogo from '../../assets/IraqLogo.png';
 import TrafficLogo from '../../assets/TrafficLogo.png';
-import { toast } from 'react-toastify';
 import { useFormik } from 'formik';
-import { Button, Grid, TextField } from '@mui/material';
 import * as yup from 'yup';
-import { inputStyleWithoutWidth } from '../../shared/styles';
 import Login from './Login';
 import Register from './Register';
 const LoginSystem = () => {
   const [activeButton, setActiveButton] = useState('login'); // "login" or "register"
-
   const handleToggle = (button) => {
     setActiveButton(button);
   };
-  const validationSchema = yup.object({
-    email: yup.string().required('البريد الإلكترونى مطلوب'),
-    phone: yup.string().required('رقم الجوال مطلوب'),
-    password: yup.string().required('كلمة المرور مطلوبة'),
-  });
-  const formik = useFormik({
-    initialValues: {
-      email: '',
-      password: '',
-    },
-    validationSchema,
-    validateOnChange: true,
-    validateOnBlur: true,
-    onSubmit: (values) => {
-      const data = {
-        email: values.email,
-        password: values.password,
-      };
 
-      const jsonData = JSON.stringify(data);
-    },
-  });
   return (
     <div>
       <header className="header">

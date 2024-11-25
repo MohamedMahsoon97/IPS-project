@@ -6,12 +6,14 @@ import { useFormik } from 'formik';
 import { Button, Grid, TextField } from '@mui/material';
 import * as yup from 'yup';
 import { inputStyleWithoutWidth } from '../../shared/styles';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 const Login = () => {
-  const [activeButton, setActiveButton] = useState('login'); // "login" or "register"
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const user = useSelector((state) => state.auth.user);
+  console.log('user: ', user);
 
-  const handleToggle = (button) => {
-    setActiveButton(button);
-  };
   const validationSchema = yup.object({
     email: yup.string().required('البريد الإلكترونى مطلوب'),
     password: yup.string().required('كلمة المرور مطلوبة'),
@@ -31,8 +33,11 @@ const Login = () => {
       };
 
       const jsonData = JSON.stringify(data);
+      navigate('/', { replace: true });
+      dispatch({ type: 'LOGIN', payload: jsonData, isAuthenticated : true });
     },
   });
+
   return (
     <div className="login-form">
       <div className="login-welcome">

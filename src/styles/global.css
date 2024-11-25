@@ -38,6 +38,42 @@ body {
   flex-direction: column;
   width: 100%;
 }
+
+/* Home */
+.main-content-header{
+  padding: 100px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  width: 100%;
+}
+.main-content-header .logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.main-content-header-welcome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: -70px;
+}
+.main-content-header-welcome img {
+  margin-bottom: 20px;
+}
+.main-content-header-welcome h2 {
+  margin-bottom: 20px;
+}
+.main-content-header-welcome p {
+  margin-bottom: 20px;
+  text-align: center;
+  width: 90%;
+}
+/* Login */
 .login-button-group {
   padding: 5px;
   margin-top: -135px;

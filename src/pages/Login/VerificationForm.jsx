@@ -44,7 +44,7 @@ const VerificationForm = () => {
         }}
         // validationSchema={validationSchema}
         onSubmit={async (values, { setErrors, setStatus, setSubmitting }) => {
-          //
+            
         }}
       >
         {({ handleSubmit, isSubmitting }) => (
@@ -55,7 +55,7 @@ const VerificationForm = () => {
           >
             <div className="login-welcome" style={{ marginBottom: '20px' }}>
               <VerificationIcon />
-              <h2>كود التأكيد</h2>
+              <h2 style={{marginTop:'20px'}}>كود التأكيد</h2>
               <p>
                 يرجى ادخال الكود المكون من اربعة ارقام المرسل ع الهاتف لاكمال
                 عمليه التسجيل
