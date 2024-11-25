@@ -12,7 +12,7 @@ import {
   MenuItem,
 } from '@mui/material';
 import { ArrowForward, ArrowBack } from '@mui/icons-material';
-
+import cardImg from '../assets/images-(5).png'
 const CurrentViolations = () => {
   const violations = [
     {
@@ -61,7 +61,7 @@ const CurrentViolations = () => {
               <CardMedia
                 component="img"
                 height="140"
-                image={violation.image}
+                image={cardImg}
                 alt={violation.car}
               />
               <CardContent>

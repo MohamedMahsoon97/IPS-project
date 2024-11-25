@@ -1,9 +1,10 @@
 import React from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
 
-const ProtectedRoute = ({ isAuthenticated, redirectTo = '/login' }) => {
-  console.log('isAuthenticated: ', isAuthenticated);
-  return isAuthenticated ? <Outlet /> : <Navigate to={redirectTo} replace />;
+const ProtectedRoute = () => {
+  // Add your authentication logic here
+  const isAuthenticated = window.localStorage.getItem('isLogged');
+  return isAuthenticated ? <Outlet /> : <Navigate to={'/login'} replace />;
 };
 
 export default ProtectedRoute;

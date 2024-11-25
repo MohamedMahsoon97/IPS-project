@@ -3,7 +3,9 @@ import React, { useState } from 'react';
 import OTPInput, { ResendOTP } from 'otp-input-react';
 import { Button, Grid } from '@mui/material';
 import VerificationIcon from '../../assets/svg/VerificationIcon';
+import { useNavigate } from 'react-router-dom';
 const VerificationForm = () => {
+  const navigate = useNavigate();
   const [OTP, setOTP] = useState('');
   const renderButton = (buttonProps) => {
     return (
@@ -44,7 +46,9 @@ const VerificationForm = () => {
         }}
         // validationSchema={validationSchema}
         onSubmit={async (values, { setErrors, setStatus, setSubmitting }) => {
-            
+          const data = JSON.stringify(values);
+          window.localStorage.setItem('isLogged', data);
+          navigate('/', { replace: true });
         }}
       >
         {({ handleSubmit, isSubmitting }) => (
@@ -55,7 +59,7 @@ const VerificationForm = () => {
           >
             <div className="login-welcome" style={{ marginBottom: '20px' }}>
               <VerificationIcon />
-              <h2 style={{marginTop:'20px'}}>كود التأكيد</h2>
+              <h2 style={{ marginTop: '20px' }}>كود التأكيد</h2>
               <p>
                 يرجى ادخال الكود المكون من اربعة ارقام المرسل ع الهاتف لاكمال
                 عمليه التسجيل

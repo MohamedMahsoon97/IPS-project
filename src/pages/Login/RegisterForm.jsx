@@ -1,11 +1,21 @@
-import { Button, Checkbox, Grid, TextField } from '@mui/material';
+import {
+  Button,
+  Checkbox,
+  Grid,
+  InputAdornment,
+  TextField,
+} from '@mui/material';
 import { useFormik } from 'formik';
 import React from 'react';
 import * as yup from 'yup';
 import { inputStyleWithoutWidth } from '../../shared/styles';
 import UploadImgIcon from '../../assets/svg/UploadImgIcon';
 import TrafficLogo from '../../assets/TrafficLogo.png';
-const RegisterForm = ({ setVerificationFormVisible }) => {
+import EmailIcon from '../../assets/svg/EmailIcon';
+import PhoneIcon from '../../assets/svg/PhoneIcon';
+import LockIcon from '../../assets/svg/LockIcon';
+import EyeIcon from '../../assets/svg/EyeIcon';
+const RegisterForm = ({ setVerificationFormVisible, setStep }) => {
   const validationSchema = yup.object({
     email: yup.string().required('البريد الإلكترونى مطلوب'),
     phone: yup.string().required('رقم الجوال مطلوب'),
@@ -31,6 +41,7 @@ const RegisterForm = ({ setVerificationFormVisible }) => {
 
       const jsonData = JSON.stringify(data);
       setVerificationFormVisible(true);
+      setStep(true);
     },
   });
   return (
@@ -64,6 +75,13 @@ const RegisterForm = ({ setVerificationFormVisible }) => {
                 error={formik?.touched?.email && Boolean(formik?.errors?.email)}
                 helperText={formik?.touched?.email && formik?.errors?.email}
                 sx={inputStyleWithoutWidth}
+                // InputProps={{
+                //   startAdornment: (
+                //     <InputAdornment position="start">
+                //       {EmailIcon}
+                //     </InputAdornment>
+                //   ),
+                // }}
               />
             </Grid>
             <Grid item xs={12} sm={12} marginBottom={1}>
@@ -79,6 +97,13 @@ const RegisterForm = ({ setVerificationFormVisible }) => {
                 error={formik?.touched?.phone && Boolean(formik?.errors?.phone)}
                 helperText={formik?.touched?.phone && formik?.errors?.phone}
                 sx={inputStyleWithoutWidth}
+                // InputProps={{
+                //   startAdornment: (
+                //     <InputAdornment position="start">
+                //       {PhoneIcon}
+                //     </InputAdornment>
+                //   ),
+                // }}
               />
             </Grid>
             <Grid item xs={12} sm={12}>
@@ -99,6 +124,16 @@ const RegisterForm = ({ setVerificationFormVisible }) => {
                 }
                 sx={inputStyleWithoutWidth}
                 type="password"
+                // InputProps={{
+                //   startAdornment: (
+                //     <InputAdornment position="start">{LockIcon}</InputAdornment>
+                //   ),
+                //   endAdornment: (
+                //     <InputAdornment position="end">
+                //         {EyeIcon}
+                //     </InputAdornment>
+                //   )
+                // }}
               />
             </Grid>
           </Grid>
@@ -120,8 +155,10 @@ const RegisterForm = ({ setVerificationFormVisible }) => {
                   }}
                 >
                   <UploadImgIcon />
-                  <h4>صورة رخصة السيارة</h4>
-                  <span>يدعم صيغ png / jpeg</span>
+                  <h4 style={{ marginBottom: '10px' }}>صورة رخصة السيارة</h4>
+                  <span style={{ color: '#878787', fontSize: '14px' }}>
+                    يدعم صيغ png / jpeg
+                  </span>
                 </label>
                 <input
                   style={{ display: 'none' }}
