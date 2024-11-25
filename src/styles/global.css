@@ -14,6 +14,7 @@
 body {
   font-family: 'Bahij TheSansArabic' !important;
 }
+
 .ISP-App {
   background-image: url('../assets/Noise.png'); /* Adjust the path */
   background-size: cover; /* Ensures the image covers the viewport */
@@ -46,7 +47,7 @@ body {
 }
 
 /* Home */
-.main-content-header{
+.main-content-header {
   padding: 100px 40px;
   display: flex;
   align-items: center;
@@ -54,7 +55,7 @@ body {
   height: 80px;
   width: 100%;
 }
-.main-content-header .logo{
+.main-content-header .logo {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -98,15 +99,15 @@ body {
   -ms-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
 }
-.main-content .violations-section .violation-container:hover{
-  background-color: #4A4244;
+.main-content .violations-section .violation-container:hover {
+  background-color: #4a4244;
   color: #fff;
 }
 .main-content .violations-section a {
   text-decoration: none;
-  color: #231F20;
+  color: #231f20;
 }
-.violation-container{
+.violation-container {
   padding: 0px 40px;
 }
 .profile-dropdown{
@@ -180,7 +181,7 @@ body {
 }
 
 .login-button-group .button:not(.active):hover {
-  background-color: #4A4244; /* Slight hover effect for inactive buttons */
+  background-color: #4a4244; /* Slight hover effect for inactive buttons */
 }
 
 .login-form {
@@ -232,7 +233,7 @@ body {
 .password-recovery {
   margin-top: 20px;
 }
-.login-form > form ,
+.login-form > form,
 .register-form > form {
   display: flex;
   align-items: center;
@@ -241,14 +242,14 @@ body {
   width: 100%;
   gap: 20px;
 }
-.login-form .login-btn ,
+.login-form .login-btn,
 .register-form .login-btn {
-  background-color: #4A4244;
+  background-color: #4a4244;
 }
-.password-recovery{
+.password-recovery {
   text-align: center;
 }
-.upload-image{
+.upload-image {
   background-color: #fff;
   padding: 15px;
   border-radius: 10px;
@@ -258,7 +259,7 @@ body {
   -o-border-radius: 10px;
 }
 
-.verification-form .otp-input{
+.verification-form .otp-input {
   width: 50px !important;
   height: 50px !important;
   font-size: 24px !important;
@@ -269,19 +270,19 @@ body {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
 }
-.otp-container{
+.otp-container {
   margin-bottom: 20px;
 }
-.verification-form .otp-input:focus{
+.verification-form .otp-input:focus {
   border: 1px solid #c6c6c6 !important;
 }
-.resend-otp-btn{
+.resend-otp-btn {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #4A4244;
+  color: #4a4244;
 }
-.verification-form .verify-btn{
-  background-color: #4A4244;
+.verification-form .verify-btn {
+  background-color: #4a4244;
   color: #fff;
 }
