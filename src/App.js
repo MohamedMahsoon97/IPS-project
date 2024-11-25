@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 const App = () => {
-  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+  const isAuthenticated = true; //useSelector((state) => state.auth.isAuthenticated);
   return (
     <BrowserRouter>
       <div className="ISP-App">

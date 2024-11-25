@@ -19,7 +19,7 @@ import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
-const CurrentViolations = () => {
+const PreviousViolation = () => {
   const NextArrow = (props) => {
     const { onClick } = props;
     return (
@@ -125,7 +125,7 @@ const CurrentViolations = () => {
         borderRadius={3}
         padding={1}
       >
-        <Typography variant="h6">الرئيسية / المخالفات الحالية</Typography>
+        <Typography variant="h6">الرئيسية / المخالفات السابقة</Typography>
         <Select defaultValue="all" size="small" sx={{ width: 150 }}>
           <MenuItem value="all">الكل</MenuItem>
           <MenuItem value="paid">مدفوعة</MenuItem>
@@ -273,4 +273,4 @@ const CurrentViolations = () => {
   );
 };
 
-export default CurrentViolations;
+export default PreviousViolation;
