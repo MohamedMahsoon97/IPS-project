@@ -4,6 +4,7 @@ import IraqLogo from '../assets/IraqLogo.png';
 import { Link } from 'react-router-dom';
 import PreviousViolationsIcon from '../assets/svg/PreviousViolationsIcon';
 import CurrentViolationsIcon from '../assets/svg/CurrentViolationsIcon';
+import ProfileDropdown from '../components/ProfileDropdown';
 const Home = () => {
   return (
     <div className="main-content">
@@ -12,7 +13,9 @@ const Home = () => {
           <img src={IraqLogo} alt="IraqLogo" width="60px" height="100px" />
           <img src={TrafficLogo} alt="IraqLogo" width="80px" height="80px" />
         </div>
-        <div className="title">أهلا بك</div>
+        <div className="title">
+          <ProfileDropdown />
+        </div>
       </div>
       <div>
         <div className="main-content-header-welcome">
@@ -27,7 +30,7 @@ const Home = () => {
               <h4>المخالفات الحالية</h4>
             </div>
           </Link>
-          <Link to='/traffic-violation'>
+          <Link to="/traffic-violation">
             <div className="violation-container">
               <PreviousViolationsIcon />
               <h4>المخالفات السابقة</h4>

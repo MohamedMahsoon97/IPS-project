@@ -17,6 +17,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import ShieldIcon from '@mui/icons-material/Shield';
 import PreviousViolation from '../components/PreviousViolation';
+import ProfileDropdown from '../components/ProfileDropdown';
 const MainLayout = ({ children }) => {
   const [activeItem, setActiveItem] = useState('personalInfo');
 
@@ -41,7 +42,9 @@ const MainLayout = ({ children }) => {
           <img src={IraqLogo} alt="IraqLogo" width="60px" height="100px" />
           <img src={TrafficLogo} alt="IraqLogo" width="80px" height="80px" />
         </div>
-        <div className="title">أهلا بك</div>
+        <div className="title">
+          <ProfileDropdown />
+        </div>
       </div>
       <div className="violation-container">
         <Grid container spacing={2}>

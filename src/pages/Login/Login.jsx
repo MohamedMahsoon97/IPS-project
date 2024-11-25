@@ -1,18 +1,16 @@
 import React, { useState } from 'react';
-import IraqLogo from '../../assets/IraqLogo.png';
 import TrafficLogo from '../../assets/TrafficLogo.png';
-import { toast } from 'react-toastify';
 import { useFormik } from 'formik';
-import { Button, Grid, TextField } from '@mui/material';
+import { Button, Grid, InputAdornment, TextField } from '@mui/material';
 import * as yup from 'yup';
 import { inputStyleWithoutWidth } from '../../shared/styles';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import LockIcon from '../../assets/svg/LockIcon';
 const Login = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const user = useSelector((state) => state.auth.user);
-  console.log('user: ', user);
 
   const validationSchema = yup.object({
     email: yup.string().required('البريد الإلكترونى مطلوب'),
@@ -35,6 +33,7 @@ const Login = () => {
       const jsonData = JSON.stringify(data);
       navigate('/', { replace: true });
       dispatch({ type: 'LOGIN', payload: jsonData, isAuthenticated : true });
+      window.localStorage.setItem('isLogged', jsonData);
     },
   });
 
@@ -82,6 +81,11 @@ const Login = () => {
               helperText={formik?.touched?.password && formik?.errors?.password}
               sx={inputStyleWithoutWidth}
               type="password"
+              // InputProps={{
+              //   startAdornment: (
+              //     <InputAdornment position="start">{LockIcon}</InputAdornment>
+              //   ),
+              // }}
             />
           </Grid>
           <Grid item xs={12} sm={12}>

@@ -19,6 +19,8 @@ import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
+import cardImg from '../assets/images-(5).png'
+
 const CurrentViolations = () => {
   const NextArrow = (props) => {
     const { onClick } = props;
@@ -151,7 +153,7 @@ const CurrentViolations = () => {
               <CardMedia
                 component="img"
                 height="140"
-                image={violation.image}
+                image={cardImg}
                 alt={violation.car}
                 sx={{
                   borderRadius: '20px',
