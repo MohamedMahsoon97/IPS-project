@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/global.css';
 import CurrentViolations from '../components/CurrentViolations';
-import Sidebar from '../components/Sidebar';
 import {
   Box,
   Grid,
@@ -13,11 +12,12 @@ import {
 } from '@mui/material';
 import IraqLogo from '../assets/IraqLogo.png';
 import TrafficLogo from '../assets/TrafficLogo.png';
-import PersonIcon from '@mui/icons-material/Person';
-import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
-import ShieldIcon from '@mui/icons-material/Shield';
 import ProfileDropdown from '../components/ProfileDropdown';
 import ConfirmData from '../components/ConfirmData';
+import ProfileIcon from '../assets/svg/ProfileIcon';
+import CarsIcon from '../assets/svg/CarsIcon';
+import CurrentViolationsSmallIcon from '../assets/svg/CurrentViolationsSmallIcon';
+import PreviousViolationsSmallIcon from '../assets/svg/PreviousViolationsSmallIcon';
 const MainLayout = ({ children }) => {
   const [activeItem, setActiveItem] = useState('personalInfo');
 
@@ -50,20 +50,21 @@ const MainLayout = ({ children }) => {
       </div>
       <div className="violation-container">
         <Grid container spacing={2}>
-          <Grid item xs={3}>
+          <Grid item xs={2.5}>
             <Box
               sx={{
                 width: '100%',
-                bgcolor: '#f5f5f5',
-                p: 2,
+                bgcolor: '#FFFFFF',
+                p: 3,
                 borderRadius: '8px',
-                boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
-                height: '100%',
+
+                // boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+                height: '500px',
               }}
             >
               <Typography
                 variant="subtitle1"
-                sx={{ mb: 2, fontWeight: 'bold' }}
+                sx={{ m: 1.5, fontWeight: 'bold' }}
               >
                 حسابي
               </Typography>
@@ -72,26 +73,44 @@ const MainLayout = ({ children }) => {
                   button
                   selected={activeItem === 'personalInfo'}
                   onClick={() => setActiveItem('personalInfo')}
+                  sx={
+                    activeItem === 'personalInfo' && {
+                      backgroundColor: '#4A4244',
+                      borderRadius: 2,
+                    }
+                  }
                 >
                   <ListItemIcon>
-                    <PersonIcon />
+                    <ProfileIcon />
                   </ListItemIcon>
-                  <ListItemText primary="المعلومات الشخصية" />
+                  <ListItemText
+                    style={{ textAlign: 'right', cursor: 'pointer' }}
+                    primary="المعلومات الشخصية"
+                  />
                 </ListItem>
                 <ListItem
                   button
                   selected={activeItem === 'cars'}
                   onClick={() => setActiveItem('cars')}
+                  sx={
+                    activeItem === 'cars' && {
+                      backgroundColor: '#4A4244',
+                      borderRadius: 2,
+                    }
+                  }
                 >
                   <ListItemIcon>
-                    <DirectionsCarIcon />
+                    <CarsIcon />
                   </ListItemIcon>
-                  <ListItemText primary="سياراتي" />
+                  <ListItemText
+                    style={{ textAlign: 'right', cursor: 'pointer' }}
+                    primary="سياراتي"
+                  />
                 </ListItem>
               </List>
               <Typography
                 variant="subtitle1"
-                sx={{ mt: 4, mb: 2, fontWeight: 'bold' }}
+                sx={{ m: 1.5, fontWeight: 'bold' }}
               >
                 المخالفات
               </Typography>
@@ -100,26 +119,44 @@ const MainLayout = ({ children }) => {
                   button
                   selected={activeItem === 'currentViolations'}
                   onClick={() => setActiveItem('currentViolations')}
+                  sx={
+                    activeItem === 'currentViolations' && {
+                      backgroundColor: '#4A4244',
+                      borderRadius: 2,
+                    }
+                  }
                 >
                   <ListItemIcon>
-                    <ShieldIcon />
+                    <CurrentViolationsSmallIcon />
                   </ListItemIcon>
-                  <ListItemText primary="المخالفات الحالية" />
+                  <ListItemText
+                    style={{ textAlign: 'right', cursor: 'pointer' }}
+                    primary="المخالفات الحالية"
+                  />
                 </ListItem>
                 <ListItem
                   button
                   selected={activeItem === 'previousViolations'}
                   onClick={() => setActiveItem('previousViolations')}
+                  sx={
+                    activeItem === 'previousViolations' && {
+                      backgroundColor: '#4A4244',
+                      borderRadius: 2,
+                    }
+                  }
                 >
                   <ListItemIcon>
-                    <ShieldIcon />
+                    <PreviousViolationsSmallIcon />
                   </ListItemIcon>
-                  <ListItemText primary="المخالفات السابقة" />
+                  <ListItemText
+                    style={{ textAlign: 'right', cursor: 'pointer' }}
+                    primary="المخالفات السابقة"
+                  />
                 </ListItem>
               </List>
             </Box>
           </Grid>
-          <Grid item xs={9}>
+          <Grid item xs={9.5}>
             <Box
               sx={{
                 bgcolor: 'transparent',

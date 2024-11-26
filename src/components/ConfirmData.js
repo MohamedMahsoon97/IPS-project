@@ -36,10 +36,11 @@ const ConfirmData = () => {
       <Box
         sx={{
           direction: 'rtl',
-          paddingTop: '40px',
+          padding: '40px',
         }}
         backgroundColor="#fff"
         display="flex"
+        gap="20px"
         height="300px"
       >
         <Box sx={{ width: '50%' }} borderLeft={1} borderColor="#dcd8d8">
@@ -52,7 +53,7 @@ const ConfirmData = () => {
             width="100%"
             gap="30px"
           >
-            <Box display="flex">
+            <Box display="flex" borderBottom={1} borderColor="#dcd8d8">
               <Typography variant="body2" color="text.secondary">
                 موديل السيارة
               </Typography>

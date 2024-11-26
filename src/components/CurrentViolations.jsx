@@ -122,7 +122,7 @@ const CurrentViolations = ({ setActiveItem }) => {
         display="flex"
         justifyContent="space-between"
         alignItems="center"
-        sx={{ mb: 6 }}
+        sx={{ mb: 3 }}
         backgroundColor="#fff"
         borderRadius={3}
         padding={1}
@@ -145,7 +145,7 @@ const CurrentViolations = ({ setActiveItem }) => {
       </Box>
 
       <Slider {...settings}>
-        {violations.map((violation, index) => (
+        {violations?.map((violation, index) => (
           <Box
             key={index}
             sx={{
@@ -276,6 +276,19 @@ const CurrentViolations = ({ setActiveItem }) => {
 
       <Box display="flex" justifyContent="end" alignItems="center" mt={10}>
         <Button
+          variant="outlined"
+          sx={{
+            backgroundColor: '#fff',
+            color: '#4a4244',
+            borderRadius: '10px',
+            width: '130px',
+            height: '37px',
+            border: 'none',
+          }}
+        >
+          رجوع
+        </Button>
+        <Button
           variant="contained"
           sx={{
             mx: 2,
@@ -289,19 +302,6 @@ const CurrentViolations = ({ setActiveItem }) => {
           onClick={() => setActiveItem('confirmData')}
         >
           التالي
-        </Button>
-        <Button
-          variant="outlined"
-          sx={{
-            backgroundColor: '#fff',
-            color: '#4a4244',
-            borderRadius: '10px',
-            width: '130px',
-            height: '37px',
-            border: 'none',
-          }}
-        >
-          رجوع
         </Button>
       </Box>
     </Box>

@@ -13,6 +13,9 @@ import ShieldIcon from '@mui/icons-material/Shield';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import ProfileIcon from '../assets/svg/ProfileIcon';
 import ArrowDown from '../assets/svg/ArrowDown';
+import CarsIcon from '../assets/svg/CarsIcon';
+import CurrentViolationsSmallIcon from '../assets/svg/CurrentViolationsSmallIcon';
+import PreviousViolationsSmallIcon from '../assets/svg/PreviousViolationsSmallIcon';
 
 const ProfileDropdown = () => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -51,24 +54,24 @@ const ProfileDropdown = () => {
         }}
       >
         <MenuItem onClick={handleMenuClose}>
-          <DirectionsCarIcon sx={{ mr: 1 }} />
+          <ProfileIcon sx={{ p: 1 }} />
           المعلومات الشخصية
         </MenuItem>
         <MenuItem onClick={handleMenuClose}>
-          <DirectionsCarIcon sx={{ mr: 1 }} />
+          <CarsIcon sx={{ p: 1 }} />
           سياراتى
         </MenuItem>
         <MenuItem onClick={handleMenuClose}>
-          <ShieldIcon sx={{ mr: 1 }} />
+          <CurrentViolationsSmallIcon sx={{ p: 1 }} />
           المخالفات الحالية
         </MenuItem>
         <MenuItem onClick={handleMenuClose}>
-          <ShieldIcon sx={{ mr: 1 }} />
+          <PreviousViolationsSmallIcon sx={{ p: 1 }} />
           المخالفات السابقة
         </MenuItem>
         <Divider />
         <MenuItem onClick={handleMenuClose}>
-          <ExitToAppIcon sx={{ mr: 1 }} />
+          <ExitToAppIcon sx={{ m: 1 }} />
           تسجيل الخروج
         </MenuItem>
       </Menu>
