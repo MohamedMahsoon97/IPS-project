@@ -19,9 +19,9 @@ import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
-import cardImg from '../assets/images-(5).png'
+import cardImg from '../assets/images-(5).png';
 
-const CurrentViolations = () => {
+const CurrentViolations = ({ setActiveItem }) => {
   const NextArrow = (props) => {
     const { onClick } = props;
     return (
@@ -30,7 +30,7 @@ const CurrentViolations = () => {
         sx={{
           position: 'absolute',
           bottom: '-25%',
-          right: '427px',
+          right: '490px',
           transform: 'translateY(-50%)',
           zIndex: 1,
           backgroundColor: '#fff',
@@ -50,7 +50,7 @@ const CurrentViolations = () => {
         sx={{
           position: 'absolute',
           bottom: '-25%',
-          left: '427px',
+          left: '490px',
           transform: 'translateY(-50%)',
           zIndex: 1,
           backgroundColor: '#fff',
@@ -111,12 +111,12 @@ const CurrentViolations = () => {
       date: '15/11/2024',
       fine: '511 ر.س',
       location: 'رياض، الحي الثاني، شارع 12',
-      car: 'هونداي / هوندا',
+      car: 'هونداي/هوندا',
     },
   ];
 
   return (
-    <Box sx={{ p: 4 }}>
+    <Box sx={{ p: 0 }}>
       {/* Breadcrumb and Filter */}
       <Box
         display="flex"
@@ -127,8 +127,17 @@ const CurrentViolations = () => {
         borderRadius={3}
         padding={1}
       >
-        <Typography variant="h6">الرئيسية / المخالفات الحالية</Typography>
-        <Select defaultValue="all" size="small" sx={{ width: 150 }}>
+        <Box>
+          <Typography variant="h7">الرئيسية / </Typography>
+          <Typography variant="h7" color="text.secondary">
+            المخالفات الحالية
+          </Typography>
+        </Box>
+        <Select
+          defaultValue="all"
+          size="small"
+          sx={{ width: 150, border: 'none' }}
+        >
           <MenuItem value="all">الكل</MenuItem>
           <MenuItem value="paid">مدفوعة</MenuItem>
           <MenuItem value="unpaid">غير مدفوعة</MenuItem>
@@ -140,13 +149,13 @@ const CurrentViolations = () => {
           <Box
             key={index}
             sx={{
-              padding: '0 10px', // Padding creates space between cards
+              padding: '0 10px',
             }}
           >
             <Card
               key={index}
               sx={{
-                padding: '20px', // Padding creates space between cards
+                padding: '20px',
                 borderRadius: '20px',
               }}
             >
@@ -159,90 +168,113 @@ const CurrentViolations = () => {
                   borderRadius: '20px',
                 }}
               />
-              <CardContent sx={{ direction: 'rtl' }}>
-                {/* <Typography variant="body1">{violation.car}</Typography>
-                <Typography variant="body2" color="text.secondary">
-                  تاريخ المخالفة: {violation.date}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  {violation.fine}
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  مكان المخالفة: {violation.location}
-                </Typography> */}
+              <CardContent
+                sx={{ direction: 'rtl', padding: '12px 0', height: '175px' }}
+                fontSize={2}
+              >
                 <Grid
                   item
-                  xs={6}
+                  xs={12}
                   container
-                  spacing={1}
+                  spacing={2}
                   alignItems="center"
                   direction="row"
+                  borderBottom={1}
+                  borderColor="#dcd8d8"
+                  width="100%"
                 >
-                  <Grid
-                    spacing={1}
-                    alignItems="center"
-                    direction="column"
-                    sx={{ marginBottom: 1 }}
-                  >
-                    {/* Car and Plate */}
-                    <Grid item xs={6}>
-                      <Box display="flex" alignItems="center" gap={1}>
-                        <DirectionsCarIcon fontSize="small" />
-                        <Typography variant="body2" fontWeight="bold">
-                          {violation.car}
-                        </Typography>
-                      </Box>
-                    </Grid>
-                    {/* Plate */}
-                    <Grid item xs={6}>
-                      <Typography
-                        variant="body2"
-                        textAlign="right"
-                        fontWeight="bold"
+                  <Grid item xs={6}>
+                    <Box>
+                      <Grid
+                        container
+                        spacing={1}
+                        alignItems="center"
+                        direction="column"
+                        sx={{ marginBottom: 1 }}
                       >
-                        22-D-400
-                      </Typography>
-                    </Grid>
+                        <Grid item>
+                          <Box display="flex" alignItems="center" gap={1}>
+                            <DirectionsCarIcon fontSize="small" />
+                            <Typography variant="body2" color="text.secondary">
+                              {violation.car}
+                            </Typography>
+                          </Box>
+                        </Grid>
+                        <Grid item>
+                          <Typography
+                            variant="body2"
+                            textAlign="right"
+                            fontWeight="bold"
+                          >
+                            22-D-400
+                          </Typography>
+                        </Grid>
+                      </Grid>
+                    </Box>
                   </Grid>
 
-                  {/* Violation Date */}
-                  <Grid
-                    spacing={1}
-                    alignItems="center"
-                    direction="column"
-                    sx={{ marginBottom: 1 }}
-                  >
-                    <Grid item xs={6}>
-                      <Box display="flex" alignItems="center" gap={1}>
-                        <CalendarTodayIcon fontSize="small" />
-                        <Typography variant="body2" color="text.secondary">
-                          تاريخ المخالفة
-                        </Typography>
-                      </Box>
-                    </Grid>
-                    <Grid item xs={6}>
-                      <Typography variant="body2" color="text.secondary">
-                        {violation.date}
-                      </Typography>
-                    </Grid>
+                  <Grid item xs={6}>
+                    <Box>
+                      <Grid
+                        container
+                        spacing={1}
+                        alignItems="center"
+                        direction="column"
+                        sx={{ marginBottom: 1 }}
+                      >
+                        <Grid item>
+                          <Box display="flex" alignItems="center" gap={1}>
+                            <CalendarTodayIcon fontSize="small" />
+                            <Typography variant="body2" color="text.secondary">
+                              تاريخ المخالفة
+                            </Typography>
+                          </Box>
+                        </Grid>
+                        <Grid item>
+                          <Typography
+                            variant="body2"
+                            textAlign="right"
+                            fontWeight="bold"
+                          >
+                            {violation.date}
+                          </Typography>
+                        </Grid>
+                      </Grid>
+                    </Box>
                   </Grid>
                 </Grid>
 
-                {/* Violation Location */}
-                <Box display="flex" alignItems="center" gap={1}>
-                  <LocationOnIcon fontSize="small" />
-                  <Typography variant="body2" color="text.secondary">
-                    مكان المخالفة {violation.location}
-                  </Typography>
-                </Box>
+                <Grid
+                  container
+                  spacing={1}
+                  direction="column"
+                  sx={{ marginBottom: 1, marginTop: 2 }}
+                >
+                  <Grid item>
+                    <Box display="flex" alignItems="center" gap={1}>
+                      <LocationOnIcon fontSize="small" />
+                      <Typography variant="body2" color="text.secondary">
+                        مكان المخالفة
+                      </Typography>
+                    </Box>
+                  </Grid>
+                  <Grid item>
+                    <Typography
+                      variant="body2"
+                      textAlign="right"
+                      fontWeight="bold"
+                    >
+                      {violation.location}
+                    </Typography>
+                  </Grid>
+                </Grid>
               </CardContent>
             </Card>
           </Box>
         ))}
       </Slider>
-      {/* </Grid> */}
 
-      <Box display="flex" justifyContent="end" alignItems="center" mt={8}>
+      <Box display="flex" justifyContent="end" alignItems="center" mt={10}>
         <Button
           variant="contained"
           sx={{
@@ -254,6 +286,7 @@ const CurrentViolations = () => {
             height: '37px',
             border: 'none',
           }}
+          onClick={() => setActiveItem('confirmData')}
         >
           التالي
         </Button>

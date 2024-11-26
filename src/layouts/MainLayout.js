@@ -16,8 +16,8 @@ import TrafficLogo from '../assets/TrafficLogo.png';
 import PersonIcon from '@mui/icons-material/Person';
 import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import ShieldIcon from '@mui/icons-material/Shield';
-import PreviousViolation from '../components/PreviousViolation';
 import ProfileDropdown from '../components/ProfileDropdown';
+import ConfirmData from '../components/ConfirmData';
 const MainLayout = ({ children }) => {
   const [activeItem, setActiveItem] = useState('personalInfo');
 
@@ -28,9 +28,11 @@ const MainLayout = ({ children }) => {
       case 'cars':
         return <Typography>سياراتي</Typography>;
       case 'currentViolations':
-        return <CurrentViolations />;
+        return <CurrentViolations setActiveItem={setActiveItem} />;
       case 'previousViolations':
-        return <PreviousViolation />;
+        return <CurrentViolations setActiveItem={setActiveItem} />;
+      case 'confirmData':
+        return <ConfirmData setActiveItem={setActiveItem} />;
       default:
         return <Typography>الرجاء اختيار عنصر من القائمة</Typography>;
     }
@@ -120,11 +122,11 @@ const MainLayout = ({ children }) => {
           <Grid item xs={9}>
             <Box
               sx={{
-                p: 3,
                 bgcolor: 'transparent',
                 borderRadius: '8px',
-                boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+                //boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
                 minHeight: '300px',
+                paddingBottom: '30px',
               }}
             >
               {renderContent()}
