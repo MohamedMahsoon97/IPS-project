@@ -53,7 +53,7 @@ const ConfirmData = () => {
             width="100%"
             gap="30px"
           >
-            <Box display="flex" borderBottom={1} borderColor="#dcd8d8">
+            <Box display="flex">
               <Typography variant="body2" color="text.secondary">
                 موديل السيارة
               </Typography>
