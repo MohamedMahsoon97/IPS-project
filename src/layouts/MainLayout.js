@@ -20,6 +20,7 @@ import CurrentViolationsSmallIcon from '../assets/svg/CurrentViolationsSmallIcon
 import PreviousViolationsSmallIcon from '../assets/svg/PreviousViolationsSmallIcon';
 import ViolationsInfo from '../components/ViolationsInfo';
 import ProfileData from '../components/ProfileData';
+import ProfileLightIcon from '../assets/svg/ProfileLightIcon';
 const MainLayout = ({ children }) => {
   const [activeItem, setActiveItem] = useState('personalInfo');
 
@@ -60,8 +61,8 @@ const MainLayout = ({ children }) => {
                 width: '100%',
                 bgcolor: '#FFFFFF',
                 p: 3,
-                borderRadius: '8px',
-                height: '540px',
+                borderRadius: '10px',
+                minHeight: '540px',
               }}
             >
               <Typography
@@ -79,11 +80,12 @@ const MainLayout = ({ children }) => {
                     activeItem === 'personalInfo' && {
                       backgroundColor: '#4A4244',
                       borderRadius: 2,
+                      color: '#FFFFFF',
                     }
                   }
                 >
                   <ListItemIcon>
-                    <ProfileIcon />
+                    <ProfileLightIcon />
                   </ListItemIcon>
                   <ListItemText
                     style={{ textAlign: 'right', cursor: 'pointer' }}
@@ -98,6 +100,7 @@ const MainLayout = ({ children }) => {
                     activeItem === 'cars' && {
                       backgroundColor: '#4A4244',
                       borderRadius: 2,
+                      color: '#FFFFFF',
                     }
                   }
                 >
@@ -125,6 +128,7 @@ const MainLayout = ({ children }) => {
                     activeItem === 'currentViolations' && {
                       backgroundColor: '#4A4244',
                       borderRadius: 2,
+                      color: '#FFFFFF',
                     }
                   }
                 >
@@ -144,6 +148,7 @@ const MainLayout = ({ children }) => {
                     activeItem === 'previousViolations' && {
                       backgroundColor: '#4A4244',
                       borderRadius: 2,
+                      color: '#FFFFFF',
                     }
                   }
                 >
