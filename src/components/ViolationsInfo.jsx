@@ -81,7 +81,7 @@ const ViolationsInfo = ({ setActiveItem }) => {
                 color="text.secondary"
                 component="span"
               >
-                موديل السيارة
+                الإسم :
               </Typography>
 
               <Typography
@@ -90,7 +90,7 @@ const ViolationsInfo = ({ setActiveItem }) => {
                 fontWeight="bold"
                 component="span"
               >
-                : هيونداي
+                محمد محسون
               </Typography>
             </ListItem>
             <ListItem
@@ -108,7 +108,7 @@ const ViolationsInfo = ({ setActiveItem }) => {
                 color="text.secondary"
                 component="span"
               >
-                رقم اللوحة
+                رقم الهاتف :
               </Typography>
 
               <Typography
@@ -117,35 +117,7 @@ const ViolationsInfo = ({ setActiveItem }) => {
                 fontWeight="bold"
                 component="span"
               >
-                : 4353564
-              </Typography>
-            </ListItem>
-
-            <ListItem
-              sx={{
-                display: 'list-item',
-                textAlign: 'start',
-                borderBottom: '1px solid #ccc',
-                listStylePosition: 'inside',
-                paddingBottom: '20px',
-                marginBottom: '20px',
-              }}
-            >
-              <Typography
-                variant="body2"
-                color="text.secondary"
-                component="span"
-              >
-                نوع الترخيص
-              </Typography>
-
-              <Typography
-                variant="body2"
-                textAlign="right"
-                fontWeight="bold"
-                component="span"
-              >
-                : خصوصي
+                7664353564
               </Typography>
             </ListItem>
 
@@ -164,7 +136,7 @@ const ViolationsInfo = ({ setActiveItem }) => {
                 color="text.secondary"
                 component="span"
               >
-                المدينة
+                نوع الغرامه :
               </Typography>
 
               <Typography
@@ -173,7 +145,35 @@ const ViolationsInfo = ({ setActiveItem }) => {
                 fontWeight="bold"
                 component="span"
               >
-                : كركوم
+                وقوف خاطئ
+              </Typography>
+            </ListItem>
+
+            <ListItem
+              sx={{
+                display: 'list-item',
+                textAlign: 'start',
+                borderBottom: '1px solid #ccc',
+                listStylePosition: 'inside',
+                paddingBottom: '20px',
+                marginBottom: '20px',
+              }}
+            >
+              <Typography
+                variant="body2"
+                color="text.secondary"
+                component="span"
+              >
+                مكان الغرامة :
+              </Typography>
+
+              <Typography
+                variant="body2"
+                textAlign="right"
+                fontWeight="bold"
+                component="span"
+              >
+                حي طيبه
               </Typography>
             </ListItem>
             <ListItem
@@ -191,7 +191,7 @@ const ViolationsInfo = ({ setActiveItem }) => {
                 color="text.secondary"
                 component="span"
               >
-                سنة الصنع
+                تاريخ و وقت الغرامة :
               </Typography>
 
               <Typography
@@ -200,7 +200,62 @@ const ViolationsInfo = ({ setActiveItem }) => {
                 fontWeight="bold"
                 component="span"
               >
-                : 2000
+                20-11-2024 / 12:00
+              </Typography>
+            </ListItem>
+
+            <ListItem
+              sx={{
+                display: 'list-item',
+                textAlign: 'start',
+                borderBottom: '1px solid #ccc',
+                listStylePosition: 'inside',
+                paddingBottom: '20px',
+                marginBottom: '20px',
+              }}
+            >
+              <Typography
+                variant="body2"
+                color="text.secondary"
+                component="span"
+              >
+                قيمة الغرامة :
+              </Typography>
+
+              <Typography
+                variant="body2"
+                textAlign="right"
+                fontWeight="bold"
+                component="span"
+              >
+                500 دينار
+              </Typography>
+            </ListItem>
+            <ListItem
+              sx={{
+                display: 'list-item',
+                textAlign: 'start',
+                borderBottom: '1px solid #ccc',
+                listStylePosition: 'inside',
+                paddingBottom: '20px',
+                marginBottom: '20px',
+              }}
+            >
+              <Typography
+                variant="body2"
+                color="text.secondary"
+                component="span"
+              >
+                حالة الدفع /
+              </Typography>
+
+              <Typography
+                variant="body2"
+                textAlign="right"
+                fontWeight="bold"
+                component="span"
+              >
+                غير مدفوع
               </Typography>
             </ListItem>
           </List>
