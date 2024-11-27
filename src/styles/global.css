@@ -14,16 +14,27 @@
 body {
   font-family: 'Bahij TheSansArabic' !important;
 }
-
+.ISP-App{
+  border: 10px solid #fff;
+  height: 100vh;
+  width: 100%;
+  overflow: scroll;
+  scrollbar-width: none;
+}
 .ISP-App-container {
   background-image: url('../assets/Noise.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   overflow: scroll;
   scrollbar-width: none;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 ::-webkit-scrollbar{
   display: none;
