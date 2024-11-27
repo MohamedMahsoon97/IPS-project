@@ -29,10 +29,10 @@ const ViolationsInfo = ({ setActiveItem }) => {
         padding={2}
       >
         <Box>
-          <Typography variant="h7">الرئيسية / </Typography>
-          <Typography variant="h7">المخالفات الحالية / </Typography>
-          <Typography variant="h7">تأكيد البيانات /</Typography>
-          <Typography variant="h7" color="text.secondary">
+          <Typography component="span">الرئيسية / </Typography>
+          <Typography component="span">المخالفات الحالية / </Typography>
+          <Typography component="span">تأكيد البيانات /</Typography>
+          <Typography component="span" color="text.secondary">
             معلومات الغرامة
           </Typography>
         </Box>
@@ -319,7 +319,13 @@ const ViolationsInfo = ({ setActiveItem }) => {
           </Card>
         </Box>
       </Box>
-      <Box display="flex" justifyContent="end" alignItems="center" gap={2} mt={5}>
+      <Box
+        display="flex"
+        justifyContent="end"
+        alignItems="center"
+        gap={2}
+        mt={5}
+      >
         <Button
           variant="outlined"
           sx={{

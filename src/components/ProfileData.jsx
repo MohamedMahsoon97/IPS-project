@@ -43,8 +43,8 @@ const ProfileData = () => {
         padding={2}
       >
         <Box>
-          <Typography variant="h7">الرئيسية / </Typography>
-          <Typography variant="h7" color="text.secondary">
+          <Typography component="span">الرئيسية / </Typography>
+          <Typography component="span" color="text.secondary">
             المعلومات الشخصية
           </Typography>
         </Box>
@@ -171,7 +171,9 @@ const ProfileData = () => {
                 <Grid container xs={12} sm={6}>
                   <Grid item xs={12} sm={12}>
                     <div className="upload-image">
-                      <Typography style={{marginBottom: '10px'}}>رخصة السيارة</Typography>
+                      <Typography style={{ marginBottom: '10px' }}>
+                        رخصة السيارة
+                      </Typography>
                       <label
                         htmlFor="image"
                         style={{

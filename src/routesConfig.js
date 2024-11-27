@@ -2,6 +2,7 @@ import { useSelector } from 'react-redux';
 import Home from './pages/Home';
 import LoginSystem from './pages/Login/LoginSystem';
 import MainLayout from './layouts/MainLayout';
+import MyCars from './components/MyCars';
 
 const routesConfig = [
   { path: '/', element: <Home />, protected: true },
