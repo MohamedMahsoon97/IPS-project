@@ -22,7 +22,7 @@ const ConfirmData = ({ setActiveItem }) => {
         display="flex"
         justifyContent="space-between"
         alignItems="center"
-        sx={{ mb: 6 }}
+        sx={{ mb: 3 }}
         backgroundColor="#fff"
         borderRadius={3}
         padding={2}
