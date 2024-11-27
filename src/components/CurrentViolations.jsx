@@ -128,8 +128,8 @@ const CurrentViolations = ({ setActiveItem }) => {
         padding={1}
       >
         <Box>
-          <Typography variant="h7">الرئيسية / </Typography>
-          <Typography variant="h7" color="text.secondary">
+          <Typography component="span">الرئيسية / </Typography>
+          <Typography component="span" color="text.secondary">
             المخالفات الحالية
           </Typography>
         </Box>
