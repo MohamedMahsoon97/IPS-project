@@ -21,6 +21,7 @@ import PreviousViolationsSmallIcon from '../assets/svg/PreviousViolationsSmallIc
 import ViolationsInfo from '../components/ViolationsInfo';
 import ProfileData from '../components/ProfileData';
 import ProfileLightIcon from '../assets/svg/ProfileLightIcon';
+import MyCars from '../components/MyCars';
 const MainLayout = ({ children }) => {
   const [activeItem, setActiveItem] = useState('personalInfo');
 
@@ -35,7 +36,7 @@ const MainLayout = ({ children }) => {
       case 'previousViolations':
         return <CurrentViolations setActiveItem={setActiveItem} />;
       case 'confirmData':
-        return <ConfirmData setActiveItem={setActiveItem} />;
+        return <MyCars setActiveItem={setActiveItem} />;
       case 'fineInformation':
         return <ViolationsInfo setActiveItem={setActiveItem} />;
       default:
