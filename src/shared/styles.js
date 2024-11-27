@@ -77,22 +77,26 @@ export const inputStyleWithoutWidth = {
   label: {
     fontWeight: '600',
   },
-  'input': {
-    backgroundColor:'#fff',
+  input: {
+    backgroundColor: '#fff',
     color: '#000 !important',
-    height: '20px'
+    height: '20px',
   },
   'input, & .MuiOutlinedInput-notchedOutline, .MuiTextField-root': {
     borderRadius: '12px',
     borderColor: '#dbd3f0 !important',
     color: '#000 !important',
   },
+  '.css-er619e-MuiFormHelperText-root': {
+    textAlign: 'right',
+    position: 'absolute',
+    bottom: '-20px',
+  },
   '&.Mui-focused, & .Mui-focused': {
     borderColor: 'purple.primary',
 
     '& .MuiOutlinedInput-notchedOutline': {
       border: '1px solid #5B31AA !important',
-      
     },
   },
 

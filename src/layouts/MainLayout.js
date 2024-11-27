@@ -18,13 +18,14 @@ import ProfileIcon from '../assets/svg/ProfileIcon';
 import CarsIcon from '../assets/svg/CarsIcon';
 import CurrentViolationsSmallIcon from '../assets/svg/CurrentViolationsSmallIcon';
 import PreviousViolationsSmallIcon from '../assets/svg/PreviousViolationsSmallIcon';
+import ProfileData from '../components/ProfileData';
 const MainLayout = ({ children }) => {
   const [activeItem, setActiveItem] = useState('personalInfo');
 
   const renderContent = () => {
     switch (activeItem) {
       case 'personalInfo':
-        return <Typography>المعلومات الشخصية</Typography>;
+        return <ProfileData />;
       case 'cars':
         return <Typography>سياراتي</Typography>;
       case 'currentViolations':
@@ -57,8 +58,6 @@ const MainLayout = ({ children }) => {
                 bgcolor: '#FFFFFF',
                 p: 3,
                 borderRadius: '8px',
-
-                // boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
                 height: '500px',
               }}
             >
