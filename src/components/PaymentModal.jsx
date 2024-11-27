@@ -277,16 +277,17 @@ const PaymentModal = ({ open, setOpen }) => {
                             justifyContent: 'center',
                             padding: 1,
                             borderRadius: 2,
-                            border: `1px solid ${
-                              selectedValue === option.value ? '#000' : '#ccc'
+                            border: `2px solid ${
+                              selectedValue === option.value
+                                ? '#05bc05'
+                                : '#ccc'
                             }`,
                             backgroundColor:
-                              selectedValue === option.value
-                                ? '#fff'
-                                : 'transparent',
+                              selectedValue === option.value ? '#fff' : '#fff',
                             cursor: 'pointer',
                             width: '140px',
                             textAlign: 'center',
+                            transition: 'all 0.5s ease-in-out'
                           }}
                           onClick={() => setSelectedValue(option.value)}
                         >
@@ -299,7 +300,7 @@ const PaymentModal = ({ open, setOpen }) => {
                                 sx={{
                                   color: '#000',
                                   '&.Mui-checked': {
-                                    color: '#000',
+                                    color: '#05bc05',
                                   },
                                 }}
                               />
@@ -310,6 +311,11 @@ const PaymentModal = ({ open, setOpen }) => {
                               '.MuiFormControlLabel-label': {
                                 fontWeight: 'bold',
                                 fontSize: '14px',
+                                color:
+                                  selectedValue === option.value
+                                    ? '#05bc05'
+                                    : '#aaa',
+                                
                               },
                             }}
                           />
