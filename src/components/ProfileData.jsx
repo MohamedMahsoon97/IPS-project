@@ -229,36 +229,6 @@ const ProfileData = () => {
           </Grid>
         </Grid>
       </Box>
-
-      <Box display="flex" justifyContent="end" alignItems="center" mt={10}>
-        <Button
-          variant="contained"
-          sx={{
-            mx: 2,
-            backgroundColor: '#4a4244',
-            color: '#fff',
-            borderRadius: '10px',
-            width: '130px',
-            height: '37px',
-            border: 'none',
-          }}
-        >
-          التالي
-        </Button>
-        <Button
-          variant="outlined"
-          sx={{
-            backgroundColor: '#fff',
-            color: '#4a4244',
-            borderRadius: '10px',
-            width: '130px',
-            height: '37px',
-            border: 'none',
-          }}
-        >
-          رجوع
-        </Button>
-      </Box>
     </Box>
   );
 };

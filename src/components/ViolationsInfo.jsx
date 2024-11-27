@@ -16,14 +16,14 @@ import {
 } from '@mui/material';
 import InfiIcon from '../assets/svg/InfoIcon';
 import cardImg from '../assets/images-(5).png';
-const FineInformation = ({ setActiveItem }) => {
+const ViolationsInfo = ({ setActiveItem }) => {
   return (
     <Box sx={{ p: 0 }}>
       <Box
         display="flex"
         justifyContent="space-between"
         alignItems="center"
-        sx={{ mb: 6 }}
+        sx={{ mb: 3 }}
         backgroundColor="#fff"
         borderRadius={3}
         padding={2}
@@ -46,6 +46,7 @@ const FineInformation = ({ setActiveItem }) => {
         backgroundColor="#fff"
         display="flex"
         gap="20px"
+        borderRadius={3}
       >
         <Box
           sx={{
@@ -318,38 +319,37 @@ const FineInformation = ({ setActiveItem }) => {
           </Card>
         </Box>
       </Box>
-      <Box display="flex" justifyContent="end" alignItems="center" mt={10}>
-        <Button
-          variant="contained"
-          sx={{
-            mx: 2,
-            backgroundColor: '#4a4244',
-            color: '#fff',
-            borderRadius: '10px',
-            width: '130px',
-            height: '37px',
-            border: 'none',
-          }}
-        >
-          دفع
-        </Button>
+      <Box display="flex" justifyContent="end" alignItems="center" gap={2} mt={5}>
         <Button
           variant="outlined"
           sx={{
             backgroundColor: '#fff',
             color: '#4a4244',
-            borderRadius: '10px',
-            width: '130px',
-            height: '37px',
+            borderRadius: '15px',
+            width: '150px',
+            height: '50px',
             border: 'none',
           }}
           onClick={() => setActiveItem('confirmData')}
         >
           رجوع
         </Button>
+        <Button
+          variant="contained"
+          sx={{
+            backgroundColor: '#4a4244',
+            color: '#fff',
+            borderRadius: '15px',
+            width: '150px',
+            height: '50px',
+            border: 'none',
+          }}
+        >
+          دفع
+        </Button>
       </Box>
     </Box>
   );
 };
 
-export default FineInformation;
+export default ViolationsInfo;

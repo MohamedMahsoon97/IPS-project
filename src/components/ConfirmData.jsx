@@ -44,6 +44,7 @@ const ConfirmData = ({ setActiveItem }) => {
         backgroundColor="#fff"
         display="flex"
         gap="20px"
+        borderRadius={3}
       >
         <Box
           sx={{
@@ -308,35 +309,34 @@ const ConfirmData = ({ setActiveItem }) => {
           </List>
         </Box>
       </Box>
-      <Box display="flex" justifyContent="end" alignItems="center" mt={10}>
-        <Button
-          variant="contained"
-          sx={{
-            mx: 2,
-            backgroundColor: '#4a4244',
-            color: '#fff',
-            borderRadius: '10px',
-            width: '130px',
-            height: '37px',
-            border: 'none',
-          }}
-          onClick={() => setActiveItem('fineInformation')}
-        >
-          التالي
-        </Button>
+      <Box display="flex" justifyContent="end" alignItems="center" gap={2} mt={5}>
         <Button
           variant="outlined"
           sx={{
             backgroundColor: '#fff',
             color: '#4a4244',
-            borderRadius: '10px',
-            width: '130px',
-            height: '37px',
+            borderRadius: '15px',
+            width: '150px',
+            height: '50px',
             border: 'none',
           }}
           onClick={() => setActiveItem('currentViolations')}
         >
           رجوع
+        </Button>
+        <Button
+          variant="contained"
+          sx={{
+            backgroundColor: '#4a4244',
+            color: '#fff',
+            borderRadius: '15px',
+            width: '150px',
+            height: '50px',
+            border: 'none',
+          }}
+          onClick={() => setActiveItem('fineInformation')}
+        >
+          التالي
         </Button>
       </Box>
     </Box>
