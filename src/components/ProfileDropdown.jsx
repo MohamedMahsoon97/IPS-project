@@ -1,21 +1,12 @@
 import React, { useState } from 'react';
-import {
-  Box,
-  Menu,
-  MenuItem,
-  IconButton,
-  Typography,
-  Divider,
-} from '@mui/material';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
-import ShieldIcon from '@mui/icons-material/Shield';
-import ExitToAppIcon from '@mui/icons-material/ExitToApp';
+import { Box, Menu, MenuItem, Typography, Divider } from '@mui/material';
 import ProfileIcon from '../assets/svg/ProfileIcon';
 import ArrowDown from '../assets/svg/ArrowDown';
 import CarsIcon from '../assets/svg/CarsIcon';
 import CurrentViolationsSmallIcon from '../assets/svg/CurrentViolationsSmallIcon';
 import PreviousViolationsSmallIcon from '../assets/svg/PreviousViolationsSmallIcon';
+import LogoutIcon from '../assets/svg/LogoutIcon';
+import ProfileLightIcon from '../assets/svg/ProfileLightIcon';
 
 const ProfileDropdown = () => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -33,10 +24,7 @@ const ProfileDropdown = () => {
     <Box>
       <div className="profile-dropdown" onClick={handleMenuOpen}>
         <ProfileIcon />
-        <Typography
-          variant="subtitle1"
-          sx={{ color: '#fff' }}
-        >
+        <Typography variant="subtitle1" sx={{ color: '#fff' }}>
           أهلاً محمد
         </Typography>
         <ArrowDown />
@@ -54,25 +42,50 @@ const ProfileDropdown = () => {
         }}
       >
         <MenuItem onClick={handleMenuClose}>
-          <ProfileIcon sx={{ p: 1 }} />
-          المعلومات الشخصية
+          <ProfileLightIcon sx={{ p: 1 }} />
+          <Typography
+            sx={{ paddingRight: 1, paddingLeft: 1 }}
+            variant="paragraph"
+          >
+            المعلومات الشخصية
+          </Typography>
         </MenuItem>
         <MenuItem onClick={handleMenuClose}>
           <CarsIcon sx={{ p: 1 }} />
-          سياراتى
+          <Typography
+            sx={{ paddingRight: 1, paddingLeft: 1 }}
+            variant="paragraph"
+          >
+            سياراتى
+          </Typography>
         </MenuItem>
         <MenuItem onClick={handleMenuClose}>
           <CurrentViolationsSmallIcon sx={{ p: 1 }} />
-          المخالفات الحالية
+          <Typography
+            sx={{ paddingRight: 1, paddingLeft: 1 }}
+            variant="paragraph"
+          >
+            المخالفات الحالية
+          </Typography>
         </MenuItem>
         <MenuItem onClick={handleMenuClose}>
           <PreviousViolationsSmallIcon sx={{ p: 1 }} />
-          المخالفات السابقة
+          <Typography
+            sx={{ paddingRight: 1, paddingLeft: 1 }}
+            variant="paragraph"
+          >
+            المخالفات السابقة
+          </Typography>
         </MenuItem>
         <Divider />
         <MenuItem onClick={handleMenuClose}>
-          <ExitToAppIcon sx={{ m: 1 }} />
-          تسجيل الخروج
+          <LogoutIcon sx={{ m: 1 }} />
+          <Typography
+            sx={{ paddingRight: 1, paddingLeft: 1 }}
+            variant="paragraph"
+          >
+            تسجيل الخروج
+          </Typography>
         </MenuItem>
       </Menu>
     </Box>

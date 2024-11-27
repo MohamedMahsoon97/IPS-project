@@ -281,8 +281,8 @@ const CurrentViolations = ({ setActiveItem }) => {
             backgroundColor: '#fff',
             color: '#4a4244',
             borderRadius: '10px',
-            width: '130px',
-            height: '37px',
+            width: '150px',
+            height: '50px',
             border: 'none',
           }}
         >
@@ -295,8 +295,8 @@ const CurrentViolations = ({ setActiveItem }) => {
             backgroundColor: '#4a4244',
             color: '#fff',
             borderRadius: '10px',
-            width: '130px',
-            height: '37px',
+            width: '150px',
+            height: '50px',
             border: 'none',
           }}
           onClick={() => setActiveItem('confirmData')}
