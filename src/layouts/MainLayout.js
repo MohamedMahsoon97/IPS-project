@@ -18,6 +18,7 @@ import ProfileIcon from '../assets/svg/ProfileIcon';
 import CarsIcon from '../assets/svg/CarsIcon';
 import CurrentViolationsSmallIcon from '../assets/svg/CurrentViolationsSmallIcon';
 import PreviousViolationsSmallIcon from '../assets/svg/PreviousViolationsSmallIcon';
+import FineInformation from '../components/FineInformation';
 const MainLayout = ({ children }) => {
   const [activeItem, setActiveItem] = useState('personalInfo');
 
@@ -33,6 +34,8 @@ const MainLayout = ({ children }) => {
         return <CurrentViolations setActiveItem={setActiveItem} />;
       case 'confirmData':
         return <ConfirmData setActiveItem={setActiveItem} />;
+      case 'fineInformation':
+        return <FineInformation setActiveItem={setActiveItem} />;
       default:
         return <Typography>الرجاء اختيار عنصر من القائمة</Typography>;
     }

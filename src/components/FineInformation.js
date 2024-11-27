@@ -14,8 +14,9 @@ import {
   ListItem,
   Divider,
 } from '@mui/material';
-
-const ConfirmData = ({ setActiveItem }) => {
+import InfiIcon from '../assets/svg/InfoIcon';
+import cardImg from '../assets/images-(5).png';
+const FineInformation = ({ setActiveItem }) => {
   return (
     <Box sx={{ p: 0 }}>
       <Box
@@ -30,8 +31,9 @@ const ConfirmData = ({ setActiveItem }) => {
         <Box>
           <Typography variant="h7">الرئيسية / </Typography>
           <Typography variant="h7">المخالفات الحالية / </Typography>
+          <Typography variant="h7">تأكيد البيانات /</Typography>
           <Typography variant="h7" color="text.secondary">
-            تأكيد البيانات
+            معلومات الغرامة
           </Typography>
         </Box>
       </Box>
@@ -212,100 +214,53 @@ const ConfirmData = ({ setActiveItem }) => {
             width: '50%',
           }}
         >
-          <List
+          <Card
             sx={{
-              listStyleType: 'disc',
-              paddingLeft: 0,
-              margin: 0,
-              '& li::marker': {
-                color: '#ccc',
-                fontSize: '.8rem',
-              },
+              boxShadow: 'none',
             }}
           >
-            <ListItem
+            <CardMedia
+              component="img"
+              height="230"
+              image={cardImg}
+              alt="image"
               sx={{
-                display: 'list-item',
-                textAlign: 'start',
-                borderBottom: '1px solid #ccc',
-                listStylePosition: 'inside',
-                paddingBottom: '20px',
-                marginBottom: '20px',
+                borderRadius: '20px',
+                padding: '0 10px',
               }}
+            />
+            <CardContent
+              sx={{ direction: 'rtl', padding: '12px 10px', height: '175px' }}
+              fontSize={2}
             >
-              <Typography
-                variant="body2"
-                color="text.secondary"
-                component="span"
+              <Box
+                display="flex"
+                sx={{
+                  backgroundColor: '#f5f9fd',
+                  border: ' 2px solid #8ac2eb',
+                  borderRadius: '10px',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  padding: '12px 0',
+                  marginTop: '20px',
+                }}
               >
-                شاسيه
-              </Typography>
+                <Box sx={{ width: '70%' }}>
+                  <Typography
+                    variant="body2"
+                    sx={{ fontSize: '15px', lineHeight: '1.6' }}
+                  >
+                    أذا كنت تعتقد بأن الغرامة غير صحيحة يمكنك
+                    <br /> التظلم على الغرامة بعد الدفع
+                  </Typography>
+                </Box>
 
-              <Typography
-                variant="body2"
-                textAlign="right"
-                fontWeight="bold"
-                component="span"
-              >
-                : 4765656545
-              </Typography>
-            </ListItem>
-            <ListItem
-              sx={{
-                display: 'list-item',
-                textAlign: 'start',
-                borderBottom: '1px solid #ccc',
-                listStylePosition: 'inside',
-                paddingBottom: '20px',
-                marginBottom: '20px',
-              }}
-            >
-              <Typography
-                variant="body2"
-                color="text.secondary"
-                component="span"
-              >
-                موتور
-              </Typography>
-
-              <Typography
-                variant="body2"
-                textAlign="right"
-                fontWeight="bold"
-                component="span"
-              >
-                : 4353564
-              </Typography>
-            </ListItem>
-
-            <ListItem
-              sx={{
-                display: 'list-item',
-                textAlign: 'start',
-                borderBottom: '1px solid #ccc',
-                listStylePosition: 'inside',
-                paddingBottom: '20px',
-                marginBottom: '20px',
-              }}
-            >
-              <Typography
-                variant="body2"
-                color="text.secondary"
-                component="span"
-              >
-                تاريخ إنتهاء الرخصة
-              </Typography>
-
-              <Typography
-                variant="body2"
-                textAlign="right"
-                fontWeight="bold"
-                component="span"
-              >
-                : 23-4-2025
-              </Typography>
-            </ListItem>
-          </List>
+                <Box>
+                  <InfiIcon />
+                </Box>
+              </Box>
+            </CardContent>
+          </Card>
         </Box>
       </Box>
       <Box display="flex" justifyContent="end" alignItems="center" mt={10}>
@@ -320,9 +275,8 @@ const ConfirmData = ({ setActiveItem }) => {
             height: '37px',
             border: 'none',
           }}
-          onClick={() => setActiveItem('fineInformation')}
         >
-          التالي
+          دفع
         </Button>
         <Button
           variant="outlined"
@@ -334,7 +288,7 @@ const ConfirmData = ({ setActiveItem }) => {
             height: '37px',
             border: 'none',
           }}
-          onClick={() => setActiveItem('currentViolations')}
+          onClick={() => setActiveItem('confirmData')}
         >
           رجوع
         </Button>
@@ -343,4 +297,4 @@ const ConfirmData = ({ setActiveItem }) => {
   );
 };
 
-export default ConfirmData;
+export default FineInformation;
