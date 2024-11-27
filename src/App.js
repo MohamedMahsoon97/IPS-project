@@ -8,7 +8,9 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="ISP-App">
-        <AppRoutes isAuthenticated={isAuthenticated} />
+        <div className="ISP-App-container">
+          <AppRoutes isAuthenticated={isAuthenticated} />
+        </div>
       </div>
     </BrowserRouter>
   );
