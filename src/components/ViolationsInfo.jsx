@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Box,
   Typography,
@@ -16,7 +16,9 @@ import {
 } from '@mui/material';
 import InfiIcon from '../assets/svg/InfoIcon';
 import cardImg from '../assets/images-(5).png';
+import PaymentModal from './PaymentModal';
 const ViolationsInfo = ({ setActiveItem }) => {
+  const [open, setOpen] = useState(false);
   return (
     <Box sx={{ p: 0 }}>
       <Box
@@ -350,10 +352,13 @@ const ViolationsInfo = ({ setActiveItem }) => {
             height: '50px',
             border: 'none',
           }}
+          onClick={() => setOpen(true)}
         >
           دفع
         </Button>
       </Box>
+
+      <PaymentModal open={open} setOpen={setOpen}/>
     </Box>
   );
 };
